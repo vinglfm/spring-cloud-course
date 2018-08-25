@@ -1,0 +1,21 @@
+server:
+  port: 8506
+#  profiles:
+#    active: native
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls
+          #username: username
+          #password: password
+          search-path:
+            - 'station*'
+          repos:
+            pref:
+              pattern:
+                - "*/pref"
+              uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls-perf
+              search-paths:
+                - 'station*'
