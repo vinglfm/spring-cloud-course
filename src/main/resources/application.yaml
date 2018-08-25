@@ -10,12 +10,11 @@ spring:
           uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls
           #username: username
           #password: password
-          search-path:
+          search-paths:
             - 'station*'
           repos:
-            pref:
-              pattern:
-                - "*/pref"
-              uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls-perf
-              search-paths:
-                - 'station*'
+             local:
+                pattern: '*/local'
+                uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls-local
+                search-paths:
+                 - 'station*'
