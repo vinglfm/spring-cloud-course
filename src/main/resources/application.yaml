@@ -6,6 +6,8 @@ spring:
   cloud:
     config:
       server:
+#        encrypt:
+#          enabled: false #should in bootstrap.properties
         git:
           uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls
           #username: username
@@ -18,3 +20,9 @@ spring:
                 uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls-local
                 search-paths:
                  - 'station*'
+  security:
+#    basic:
+#      enabled: false #doesn't work in Spring book 2
+    user:
+      name: pluralsight
+      password: pluralsight
